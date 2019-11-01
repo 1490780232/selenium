@@ -78,5 +78,4 @@ elif selectMethod == 8:
 # 等待10秒    
 sleep(10)  
 # 关闭浏览器退出 
-driver.quit()    
-
+driver.quit()

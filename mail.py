@@ -6,22 +6,26 @@ driver.get("https://mail.qq.com")
 sleep(1)
 print("=========>")
 driver.switch_to.frame('login_frame')
-driver.find_element_by_class_name("switch_btn").click()
+sleep(3)
+# switch=driver.find_element_by_class_name("switch_btn")
+# if(switch!=None):
+#     switch.click()
 driver.find_element_by_id("u").send_keys("1490780232")
 sleep(1)
 driver.find_element_by_id("p").send_keys("Lla34038885051202")
 
 
 element=driver.find_element_by_id("login_button")
-
+print(element)
 element.click()
 print(driver.current_url)
 driver.switch_to.default_content()
 print(driver.find_element_by_tag_name("body").text)
+driver.find_element_by_id("pp").send_keys("a34038885051202")
+
 driver.find_element_by_id("folder_1").click()
 
-#########写信
-#单击写信按钮
+
 driver.find_element_by_link_text("写信").click()
 
 print(driver.find_element_by_tag_name("html").text)
